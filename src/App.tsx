@@ -14,9 +14,10 @@ const m = (input: string, mask: string) => (word: string) =>
       const m = mask[i];
       const w = word[i];
 
-      const hitMask = mask.split('').map( (m,i) => m === 'h' || m === 'b')
-      const notHitChars = input.split("")
-        .filter( (_,ii) => !hitMask[ii] && ii !== i )
+      const hitMask = mask.split("").map((m, i) => m === "h" || m === "b");
+      const notHitChars = input
+        .split("")
+        .filter((_, ii) => !hitMask[ii] && ii !== i);
 
       if (m === "h") {
         return w === c;
